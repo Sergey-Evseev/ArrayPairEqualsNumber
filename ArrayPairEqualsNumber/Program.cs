@@ -18,6 +18,7 @@ namespace ArrayPairEqualsNumber
             }
             return false;
         }
+
         static void printResults(int[]arr, int key) {
             Console.WriteLine("For array:");
             int size = arr.Length;
