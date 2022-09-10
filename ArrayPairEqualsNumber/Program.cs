@@ -1,4 +1,6 @@
-﻿using System;
+﻿//1. Простой перебор массива каждого числа со всеми остальными
+
+using System;
 
 namespace ArrayPairEqualsNumber
 {
