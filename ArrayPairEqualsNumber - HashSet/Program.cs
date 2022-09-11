@@ -12,13 +12,13 @@ namespace ArrayPairEqualsNumber
             HashSet<int> set = new HashSet<int>();                       
             for (int i = 0; i < arr.Length; ++i)
             {
-                int temp = sum - arr[i];
-                if (set.Contains(temp))
+                int temp = sum - arr[i]; //временная переменная для поиска пары для текущего значения цикла
+                if (set.Contains(temp)) //если такая переменная есть
                 {
                     Console.WriteLine("\nPair with given sum: " + sum + " is (" + arr[i] + ", " + temp + ")");
                     return true;
                 }
-                else set.Add(arr[i]);
+                else set.Add(arr[i]); //если нет то добавить текущее значение в сет
                 
             }
             return false;
