@@ -18,7 +18,7 @@ namespace ArrayPairEqualsNumber
                 int temp = sum - arr[i]; //временная переменная для поиска пары для текущего значения цикла
                 if (set.Contains(temp)) //если такая переменная есть
                 {
-                    Console.WriteLine("\nPair with given sum: " + sum + " is (" + arr[i] + ", " + temp + ")");
+                    Console.WriteLine("\nPair with a given sum: " + sum + " is: (" + arr[i] + ", " + temp + ")");
                     flag = true; //меняем flag на true 
                 }
                 else set.Add(arr[i]); //если нет то добавить текущее значение в сет
