@@ -1,5 +1,6 @@
-﻿//2.1. Перебор массива с созданием хэшсета: поиск числа в сете которое составляет разницу 
-//между искомой суммой и текущим значением цикла
+﻿//2.2. Перебор массива с созданием хэшсета: поиск числа в сете которое составляет разницу 
+//между искомой суммой и текущим значением цикла - с возвращаемым булевым флагом - перебираем 
+//все варианты, а не останавливаемся на первом
 
 using System;
 using System.Collections.Generic;
@@ -10,25 +11,26 @@ namespace ArrayPairEqualsNumber
     {
         static bool chkPair(int[] arr, int sum)
         {
-            HashSet<int> set = new HashSet<int>();                       
+            HashSet<int> set = new HashSet<int>();
+            bool flag = false;
             for (int i = 0; i < arr.Length; ++i)
             {
                 int temp = sum - arr[i]; //временная переменная для поиска пары для текущего значения цикла
                 if (set.Contains(temp)) //если такая переменная есть
                 {
                     Console.WriteLine("\nPair with given sum: " + sum + " is (" + arr[i] + ", " + temp + ")");
-                    return true;
+                    flag = true; //меняем flag на true 
                 }
                 else set.Add(arr[i]); //если нет то добавить текущее значение в сет
-                
             }
-            return false;
+            return flag; //если ничего не нашли оставляем флаг false и возвращаем его
         }
 
         static void printResults(int[] arr, int key)
         {
-            Console.WriteLine("For array:");            
-            foreach (var item in arr) {
+            Console.WriteLine("For array:");
+            foreach (var item in arr)
+            {
                 Console.Write(item + " ");
             }
             if (chkPair(arr, key))
@@ -43,7 +45,7 @@ namespace ArrayPairEqualsNumber
 
         static void Main(string[] args)
         {
-            int[] A1 = { -1, 2, 5, 8, 15}; int x1 = 7;
+            int[] A1 = { -1, 2, 5, 8, 15 }; int x1 = 7;
             int[] A2 = { -3, -1, 0, 2, 6 }; int x2 = 6;
             int[] A3 = { 2, 4, 5 }; int x3 = 8;
             int[] A4 = { -2, -1, 1, 2 }; int x4 = 0;
