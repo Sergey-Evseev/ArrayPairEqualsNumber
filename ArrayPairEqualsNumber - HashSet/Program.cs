@@ -1,24 +1,25 @@
-﻿//2. Перебор массива с хэшсетом
+﻿//2. Перебор массива с созданием хэшсета
 
 using System;
+using System.Collections.Generic;
 
 namespace ArrayPairEqualsNumber
 {
     class Program
     {
-        static bool chkPair(int[] A, int x)
+        static bool chkPair(int[] arr, int sum)
         {
-            int size = A.Length;
-            for (int i = 0; i < (size - 1); i++)
+            HashSet<int> set = new HashSet<int>();                       
+            for (int i = 0; i < arr.Length; ++i)
             {
-                for (int j = (i + 1); j < size; j++)
+                int temp = sum - arr[i];
+                if (set.Contains(temp))
                 {
-                    if (A[i] + A[j] == x)
-                    {
-                        Console.WriteLine("\nPair with a given sum: " + x + " is (" + A[i] + ", " + A[j] + ")");
-                        return true;
-                    }
+                    Console.WriteLine("\nPair with given sum: " + sum + " is (" + arr[i] + ", " + temp + ")");
+                    return true;
                 }
+                else set.Add(arr[i]);
+                
             }
             return false;
         }
@@ -41,7 +42,7 @@ namespace ArrayPairEqualsNumber
 
         static void Main(string[] args)
         {
-            int[] A1 = { -1, 2, 5, 8 }; int x1 = 7;
+            int[] A1 = { -1, 2, 5, 8, 15}; int x1 = 7;
             int[] A2 = { -3, -1, 0, 2, 6 }; int x2 = 6;
             int[] A3 = { 2, 4, 5 }; int x3 = 8;
             int[] A4 = { -2, -1, 1, 2 }; int x4 = 0;
