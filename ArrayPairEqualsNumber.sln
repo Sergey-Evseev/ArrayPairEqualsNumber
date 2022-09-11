@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayPairEqualsNumber-HashS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayPairEqualsNumber - binary search", "ArrayPairEqualsNumber - binary search\ArrayPairEqualsNumber - binary search.csproj", "{833600B0-996F-4C93-AAC8-0A408D88D257}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayPairEqualsNumber-pointers", "ArrayPairEqualsNumber-pointers\ArrayPairEqualsNumber-pointers.csproj", "{5F4F850A-AC00-4CB4-8297-27097AEC53A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{833600B0-996F-4C93-AAC8-0A408D88D257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{833600B0-996F-4C93-AAC8-0A408D88D257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{833600B0-996F-4C93-AAC8-0A408D88D257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F4F850A-AC00-4CB4-8297-27097AEC53A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4F850A-AC00-4CB4-8297-27097AEC53A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4F850A-AC00-4CB4-8297-27097AEC53A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4F850A-AC00-4CB4-8297-27097AEC53A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
